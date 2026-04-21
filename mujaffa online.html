@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <title>Mujaffa Spillet</title>
+  <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+</head>
+<body style="margin:0; background:black; display:flex; justify-content:center; align-items:center; height:100vh;">
+
+  <div id="game"></div>
+
+  <script>
+    window.RufflePlayer = window.RufflePlayer || {};
+    const ruffle = window.RufflePlayer.newest();
+    const player = ruffle.createPlayer();
+    document.getElementById("game").appendChild(player);
+
+    player.load("https://archive.org/download/mujaffa_3juni_2003/mujaffa_3juni_2003.swf");
+  </script>
+
+</body>
+</html>
