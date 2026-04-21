@@ -11,11 +11,19 @@
 
   <script>
     window.RufflePlayer = window.RufflePlayer || {};
-    const ruffle = window.RufflePlayer.newest();
-    const player = ruffle.createPlayer();
-    document.getElementById("game").appendChild(player);
 
-    player.load("https://archive.org/download/mujaffa_3juni_2003/mujaffa_3juni_2003.swf");
+    window.addEventListener("load", () => {
+      const ruffle = window.RufflePlayer.newest();
+      const player = ruffle.createPlayer();
+
+      player.style.width = "800px";
+      player.style.height = "600px";
+
+      document.getElementById("game").appendChild(player);
+
+      // 🔥 VIGTIGT: lokal fil
+      player.load("mujaffa.swf");
+    });
   </script>
 
 </body>
